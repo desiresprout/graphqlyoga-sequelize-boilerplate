@@ -1,0 +1,29 @@
+type User {
+  id : Int!
+  name : String!
+  society : String!
+}
+
+type Room {
+  id : Int!
+  name : String!
+  type : Int!
+}
+
+type Book{
+  userid : Int!
+  roomid : Int!
+  time : String!
+}
+
+type Error{
+  status : String!
+  message : String!
+}
+
+
+
+type Query {
+  getuser(user_id: Int): User!
+  setbook(user_id: Int room_id: Int time : String ) : Error!
+}
